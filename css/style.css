@@ -68,7 +68,7 @@ h1{
 
 
 }
-.button{
+/* .button{
   width: 300px;
   height: 300px;
   border: 5px solid red;
@@ -76,7 +76,7 @@ h1{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
 
 /* qui vengono date le informazioni riguardanti la posizione della scritta sopra l'immaginee l'ombreggiatura */
@@ -87,7 +87,8 @@ h1{
   transform: translate(-50%, -50%);
   color: white;
   text-transform: uppercase; /*questo attributo trasforma il testo IN STAMPATELLO*/
-  text-shadow: 0 0 3px rgb(175, 122, 0);
+  text-shadow: 5px 5px rgb(175, 122, 0);
+  font-size: 50px;
 }
 
 /* qui indico che le scritte h2, quando passa sopra il cursore, devono sparire */
@@ -110,10 +111,11 @@ h1{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 20px;
+  font-size: 90px;
   color: rgb(255, 0, 0);
   text-transform: uppercase;
   text-shadow: 0 0 3px rgb(194, 200, 0);
+  text-align: center; /*inserito per centrare il tutto, dato che ho aumentato la grandezza del font*/
 }
 
 
@@ -145,10 +147,12 @@ footer{
   width: 100%;
 }
 
+/* per ingrandire il carattere speciale della freccia */
 #downarrow{
   font-size: 40px;
 }
 
+/* creiamo un finto video, il link dell'immagine è più in basso */
 .player{
   position: relative;
   width: 100%;
@@ -158,7 +162,7 @@ footer{
 }
 
 
-
+/* creiamo l'ombreggiatura sopra l'immagine, così da farla sembrare un video */
 .player .video{
   width: 100%;
   height: 100%;
@@ -168,6 +172,7 @@ footer{
   position: relative;
 }
 
+/* attributi del pulsante del player */
 .player .video .play-button{
   color: rgba(255, 255, 255, 0.6);
   font-size: 90px;
@@ -184,11 +189,14 @@ footer{
   transform: translate(-50%, -50%);
 }
 
+/* per fare in modo che quando passi sopra il button, diventi più bianco */
 .fab:hover{
   color: white;
 }
 
+/* link remoto dell'immagine che uso come immagine background del contenitore .player  */
 #photo-player{
   background-image: url("https://img.ilgcdn.com/sites/default/files/styles/large/public/foto/2020/11/04/1604523108-lapresse-20201104214011-34519017.jpg");
 
 }
+/* /FOOTER */
