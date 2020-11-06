@@ -41,7 +41,7 @@ h1{
 
   /* width: 600px;
   height: 300px; */
-  margin: 4px 0;
+  margin: 4px 0; /*posso togliere il margine se non piace quella piccola separazione tra i box*/
   background-size: cover; /*utilizzando contain le immagini si ripetono*/
   background-position: center;
 }
@@ -56,14 +56,26 @@ h1{
 }
 
 /* con questo, indico che il cursore deve trasformarsi in puntatore quando passo sopra i box */
-.box:hover{
+/* .box:hover{
   cursor: pointer;
-}
+} */
 
 /* per dire che quando passo con il cursore sopra il box, la sfumatura nera deve sparire */
 .box:hover .layover{
   background-color: rgba(0, 0, 0, 0);
   /* display: none; non va bene, perchè toglierebbe la scritta */
+
+
+
+}
+.button{
+  width: 300px;
+  height: 300px;
+  border: 5px solid red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -124,3 +136,59 @@ h1{
 }
 
 /* /MAIN */
+
+
+/* FOOTER */
+
+footer{
+  font-size: 20px;
+  width: 100%;
+}
+
+#downarrow{
+  font-size: 40px;
+}
+
+.player{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-top: 5px solid red;
+  background-size: cover;
+}
+
+
+
+.player .video{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  position: relative;
+}
+
+.player .video .play-button{
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 90px;
+
+  /* se voglio il playbutton sulla sinistra
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);*/
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fab:hover{
+  color: white;
+}
+
+#photo-player{
+  background-image: url("https://img.ilgcdn.com/sites/default/files/styles/large/public/foto/2020/11/04/1604523108-lapresse-20201104214011-34519017.jpg");
+
+}
