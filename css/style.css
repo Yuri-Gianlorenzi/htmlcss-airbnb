@@ -5,23 +5,34 @@
   box-sizing: border-box;
 }
 
+/* qui viene inserito un google font, oltre ad un colore di sottofondo per tutto il body */
 body{
   font-family: 'Roboto Mono', monospace;
   background-color: rgba(0, 255, 186, 0.4)
 }
 
 
+/* HEADER */
+/* per creare una separazione tra il titolo e il main */
+h1{
+  border-bottom: 5px solid rgb(175, 122, 0);
+}
+/* /HEADER */
+
+
+/* MAIN */
+
+/* qui viene indicata la larghezza del contenitore principale, dove andranno i box delle immagini */
 .container{
-  width: 300px;
-  height: 400px;
+  width: 600px;
   margin: auto;
 }
 
 
+/* qui diamo le dimensioni dei box, un margine, e specifichiamo che l'immagine background copra tutto lo sfondo del box, se avessi usato contain l'immagine si riproduceva in parte */
 .box{
-  width: 300px;
+  width: 600px;
   height: 300px;
-  background-color: blue;
   margin: 4px 0;
   background-size: cover; /*utilizzando cover le immagini si ripetono*/
 }
@@ -32,20 +43,57 @@ body{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   position: relative;
-  color: white;
-  text-transform: uppercase;
 }
 
-h2{
+/* con questo, indico che il cursore deve trasformarsi in puntatore quando passo sopra i box */
+.box:hover{
+  cursor: pointer;
+}
+
+/* per dire che quando passo con il cursore sopra il box, la sfumatura nera deve sparire */
+.box:hover .layover{
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+/* qui vengono date le informazioni riguardanti la posizione della scritta sopra l'immaginee l'ombreggiatura */
+.box .layover h2{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0 3px rgb(175, 122, 0);
+}
+
+/* qui indico che le scritte h2, quando passa sopra il cursore, devono sparire */
+.box:hover .layover h2{
+  display: none;
+}
+
+
+/* per far comparire la scritta SOLO quando passo sopra con il cursore, devo specificare display none per tutti gli h3 figli di .layover */
+.box .layover h3{
+  display: none;
+}
+
+/* per far comparire la scritta, SOLO quando il cursore è sopra al box, imposto display block, e tutte le indicazioni per centrare la scritta */
+.box:hover .layover h3{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: rgb(255, 0, 0);
+  text-transform: uppercase;
+  text-shadow: 0 0 3px rgb(194, 200, 0);
 }
 
 
 
-
+/* id con link immagine per gli sfondi dei box */
 #beach{
   background-image: url("https://cdn.pixabay.com/photo/2014/03/24/10/17/beach-293826__340.jpg");
 }
@@ -61,3 +109,5 @@ h2{
 #hill{
   background-image: url("https://cdn.pixabay.com/photo/2017/03/22/17/40/hill-2165759__340.jpg");
 }
+
+/* /MAIN */
